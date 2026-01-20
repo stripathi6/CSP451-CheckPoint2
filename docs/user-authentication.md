@@ -19,3 +19,7 @@ This branch improves the login page user experience by adding:
 ## Notes
 This is a front-end demo enhancement only.
 Backend authentication will be implemented later in API work.
+
+## Password toggle
+The password field includes a Show/Hide toggle button so the user can temporarily view their password while typing.
+
