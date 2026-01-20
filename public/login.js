@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
   const loginBtn = document.getElementById("loginBtn");
+  const togglePasswordBtn = document.getElementById("togglePassword");
+
 
   const emailError = document.getElementById("emailError");
   const passwordError = document.getElementById("passwordError");
@@ -83,6 +85,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initial state
   validate();
+
+  // Show/Hide password toggle
+togglePasswordBtn?.addEventListener("click", () => {
+  if (!passwordInput) return;
+
+  const isHidden = passwordInput.type === "password";
+  passwordInput.type = isHidden ? "text" : "password";
+
+  togglePasswordBtn.textContent = isHidden ? "Hide" : "Show";
+  togglePasswordBtn.setAttribute(
+    "aria-label",
+    isHidden ? "Hide password" : "Show password"
+  );
+});
+
 
   form?.addEventListener("submit", (e) => {
     e.preventDefault();

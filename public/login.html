@@ -21,7 +21,12 @@
 
       <label>
         Password
-        <input type="password" id="password" name="password" placeholder="••••••••" required minlength="6" />
+        <div style="display: flex; gap: 8px; align-items: center;">
+        <input type="password" id="password" name="password" placeholder="••••••" required minlength="6" style="flex: 1;" />
+        <button id="togglePassword" type="button" aria-label="Show password">
+          Show
+        <button>
+        </div>
       </label>
       <!-- NEW: Password error message -->
       <p id="passwordError" class="muted" style="color: red; margin-top: 4px;"></p> 
