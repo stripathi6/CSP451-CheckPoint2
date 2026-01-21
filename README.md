@@ -1,7 +1,7 @@
 # CSP451 Web Starter — Week 2 Checkpoint 2
 
-## Conflict Test (A)
-This line was added by Branch A.
+## Conflict Test (B)
+This line was added by Branch B.
 
 This repository is a **starter template** for practicing:
 - Git branching strategies (GitHub Flow / Git Flow-lite)
