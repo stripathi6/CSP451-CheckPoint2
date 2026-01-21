@@ -6,6 +6,9 @@ This repository is a **starter template** for practicing:
 - Intentional merge conflicts + manual resolution
 - Clean history using **Squash and merge**
 
+## Team Note (Conflict Test)
+This README change was made by Developer A (feature/conflict-readme-a).
+
 ## Quick Start
 
 ```bash
