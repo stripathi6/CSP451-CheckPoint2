@@ -3,14 +3,14 @@
 ## Conflict Test (B)
 This line was added by Branch B.
 
+## Team Note (Conflict Test)
+This README change was made by Developer A (feature/conflict-readme-a).
+
 This repository is a **starter template** for practicing:
 - Git branching strategies (GitHub Flow / Git Flow-lite)
 - Pull Requests + review workflow
 - Intentional merge conflicts + manual resolution
 - Clean history using **Squash and merge**
-
-## Team Note (Conflict Test)
-This README change was made by Developer A (feature/conflict-readme-a).
 
 ## Quick Start
 
