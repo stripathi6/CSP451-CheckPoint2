@@ -5,7 +5,8 @@ function authenticate(email, password) {
   const okPassword = typeof password === "string" && password.length >= 6;
 
   if (!okEmail || !okPassword) {
-    return { ok: false, error: "Invalid credentials format." };
+    return { ok: false, error: "Email must contain @ and . and password must be 6+ characters." };
+
   }
 
   // stub “token” (do NOT use in real apps)
