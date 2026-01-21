@@ -1,5 +1,9 @@
 # CSP451 Web Starter — Week 2 Checkpoint 2
 
+## Team Note (Conflict Test)
+This README change was made by Developer A (feature/conflict-readme-a).
+
+
 This repository is a **starter template** for practicing:
 - Git branching strategies (GitHub Flow / Git Flow-lite)
 - Pull Requests + review workflow
