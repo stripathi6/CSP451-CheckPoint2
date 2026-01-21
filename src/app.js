@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+const dbRoutes = require("./routes/db.routes");
+
 
 const { router: apiRouter } = require("./routes/api");
 const { router: viewRouter } = require("./routes/views");
@@ -16,6 +18,8 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 // Routes
 app.use("/", viewRouter);
 app.use("/api", apiRouter);
+app.use("/api/db", dbRoutes);
+
 
 // 404 handler
 app.use((req, res) => {
