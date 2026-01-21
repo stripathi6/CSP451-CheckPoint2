@@ -11,8 +11,13 @@ const authRouter = require("./auth.routes");
  */
 
 router.get("/health", (req, res) => {
-  res.json({ status: "ok", time: new Date().toISOString() });
+  res.json({
+    ok: true,
+    data: { status: "ok", time: new Date().toISOString() },
+    error: null,
+  });
 });
+
 
 // NEW: mount auth routes under /api/auth
 router.use("/auth", authRouter);
@@ -25,5 +30,26 @@ router.get("/version", (req, res) => {
     env: process.env.NODE_ENV || "dev",
   });
 });
+
+// POST /api/echo
+// Body: { "message": "hello" }
+router.post("/echo", (req, res) => {
+  const message = req.body?.message;
+
+  if (!message || typeof message !== "string" || message.trim().length < 2) {
+    return res.status(400).json({
+      ok: false,
+      data: null,
+      error: "message is required and must be at least 2 characters",
+    });
+  }
+
+  return res.status(200).json({
+    ok: true,
+    data: { echoed: message.trim(), length: message.trim().length },
+    error: null,
+  });
+});
+
 
 module.exports = { router };
